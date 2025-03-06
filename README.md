@@ -25,22 +25,11 @@ To extract the text form the audio file the following code will be used
 
 
 
-# Import required libraries
 import whisperx
-
-# Set device (Change to "cuda" if using GPU)
 device = "cpu"
-
-# Load the WhisperX model (Choose: tiny, base, small, medium, large, large-v2)
 model = whisperx.load_model("medium", device=device, compute_type="float32")
-
-# Define the path to your uploaded audio file
 audio_file = "/content/extracted_audio.mp3"
-
-# Transcribe the audio
 transcription = model.transcribe(audio_file)
-
-# Print the transcription result
 print("Transcription:", transcription)
 
 
@@ -183,7 +172,6 @@ def parse_gpt4all_summary(gpt_output):
         "decisions_made": decisions_made,
         "action_items": action_items
     }
-
-# Parse GPT output into structured lists
 parsed_data = parse_gpt4all_summary(gpt_output)
+
 
