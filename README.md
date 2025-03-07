@@ -7,20 +7,53 @@ We used opensource "AI GPT for all" which is an offline GPT used for the summari
 Run all the codes in the Google Colab. The codes are running on single core CPU not GPU, so it takes time to run.
 Install these libraries to run the code without any possible errors
 
-!apt-get install -y ffmpeg  # System-level ffmpeg for audio extraction
-!pip install torch torchaudio
-!pip install git+https://github.com/m-bain/whisperX.git
-!pip install ffmpeg-python
-!pip install gpt4all
+To list these as required dependencies in your GitHub README file, you can create a **"Requirements"** section and provide installation instructions. Here's how you can format it:  
+
+### Example README Section:
+
+```markdown
+## Requirements
+
+To run this project, you need to install the following dependencies:
+
+### System Dependencies:
+Ensure you have `ffmpeg` installed:
+```bash
+sudo apt-get install -y ffmpeg
+```
+
+### Python Dependencies:
+Install the required Python packages using pip:
+```bash
+pip install torch torchaudio
+pip install git+https://github.com/m-bain/whisperX.git
+pip install ffmpeg-python
 pip install gpt4all
-!pip install torch torchaudio
-!pip install git+https://github.com/m-bain/whisperX.git
-!pip install ffmpeg-python
-!apt-get install -y ffmpeg
 pip install py-trello
+```
 
+Alternatively, you can install all dependencies using a single command:
+```bash
+pip install -r requirements.txt
+```
 
-The speech is extracted in text format using whisper.
+## Installation using `requirements.txt`
+You can create a `requirements.txt` file and add:
+```
+torch
+torchaudio
+git+https://github.com/m-bain/whisperX.git
+ffmpeg-python
+gpt4all
+py-trello
+```
+Then install all dependencies with:
+```bash
+pip install -r requirements.txt
+```
+```
+
+This ensures that anyone cloning your repository can easily install the necessary dependencies. Let me know if you need further refinements! 🚀
 
 
 
